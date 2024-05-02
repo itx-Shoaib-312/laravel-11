@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CrudRequest;
 use App\Models\Crud;
-use Illuminate\Http\Request;
 
 class CrudController extends Controller
 {
@@ -12,9 +12,9 @@ class CrudController extends Controller
         $get = Crud::get();
         return response($get);
     }
-    public function add_record(Request $request)
+    public function add_record(CrudRequest $request)
     {
-        // dd($request->id);
+        $request->validated();
         if ($request->id == null) {
             $user = Crud::create([
                 'fname' => $request->fname,
