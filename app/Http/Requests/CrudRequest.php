@@ -11,7 +11,7 @@ class CrudRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,6 +22,9 @@ class CrudRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'fname' => 'required|string|max:255',
+            'lname' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
             //
         ];
     }

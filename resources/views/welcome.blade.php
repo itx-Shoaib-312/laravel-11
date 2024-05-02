@@ -21,6 +21,14 @@
             <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavId">
                 <h4 class="text-white ">Ajax..!</h4>
             </div>
+            <div class="d-flex my-2 my-lg-0">
+                {{-- <a type="button" href="" class="btn btn-outline-warning m-2 my-sm-0" type="submit">
+                    Categories
+                </a> --}}
+                <a type="button" href="{{route('dashboard')}}" class="btn btn-outline-info my-2 my-sm-0" type="submit">
+                    Dashboard
+                </a>
+            </div>
         </nav>
     </header>
     <main class=" justify-content-center align-items-center">
